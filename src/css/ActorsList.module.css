@@ -1,0 +1,26 @@
+.actorName {
+  background-color: black;
+  text-decoration: none;
+  color: white;
+  margin-top: 10px;
+}
+
+.actorContainer {
+  display: inline-block;
+  width: 100px;
+}
+
+.movielistTitle {
+  margin-top: 10px;
+}
+
+.genreContainer {
+  background-color: grey;
+  border-radius: 10px;
+  width: 130px;
+}
+
+.listContainer {
+  margin-top: 20px;
+  width: 50%;
+}

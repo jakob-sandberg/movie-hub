@@ -1,25 +1,45 @@
-import "./App.css";
 import HomePage from "./pages/HomePage";
 import Navigation from "./components/Navigation";
-
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Movies from "./pages/Movies";
+import { Route, Switch } from "react-router-dom";
+import GenrePage from "./pages/GenrePage";
+import GenreListPage from "./pages/GenreListPage";
+import MoviePage from "./pages/MoviePage";
+import MoviesOnCinemaPage from "./pages/MoviesOnCinemaPage";
+import TopRatedMovies from "./pages/TopRatedMovies";
+import MostPopularMoviesPage from "./pages/MostPopularMoviesPage";
+import ActorPage from "./pages/ActorPage";
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Navigation />
-        <Switch>
-          <Route exact path="/">
-            <HomePage />
-          </Route>
+      <Navigation />
+      <Switch>
+        <Route exact path="/">
+          <HomePage />
+        </Route>
 
-          <Route path="/movies">
-            <Movies />
-          </Route>
-        </Switch>
-      </BrowserRouter>
+        <Route path="/movie/:id">
+          <MoviePage />
+        </Route>
+        <Route path="/genre/:id">
+          <GenrePage />
+        </Route>
+        <Route path="/genre">
+          <GenreListPage />
+        </Route>
+        <Route path="/cinema">
+          <MoviesOnCinemaPage />
+        </Route>
+        <Route path="/top-rated">
+          <TopRatedMovies />
+        </Route>
+        <Route path="/popular">
+          <MostPopularMoviesPage />
+        </Route>
+        <Route path="/actor/:id">
+          <ActorPage />
+        </Route>
+      </Switch>
     </div>
   );
 }

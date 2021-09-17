@@ -1,0 +1,89 @@
+.moviePageContainer {
+  height: 100%;
+}
+.movieinfocontainer {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 1.7rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+
+.miniwrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.poster {
+  margin-bottom: 20px;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.posterContainer img {
+  height: 100%;
+}
+
+.descContainer {
+  width: 50%;
+  height: 100px;
+  word-wrap: break-word;
+}
+
+.bioText {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 16;
+  -webkit-box-orient: vertical;
+}
+
+.actorsMovie {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+h2 {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .movieinfocontainer {
+    align-items: flex-start;
+  }
+
+  .posterAndText {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .posterContainer {
+    height: 400px;
+  }
+
+  .descContainer {
+    padding-left: 30px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .miniwrapper {
+    display: flex;
+  }
+
+  .descContainer {
+    padding-right: 50px;
+  }
+}
