@@ -16,6 +16,7 @@ const MostPopularMoviesPage = () => {
       {isLoading && <Spinner />}
 
       <Row className="justify-content-around">
+        <h1>POPULAR MOVIES RIGHT NOW</h1>
         {data &&
           data.results.map((movie, i) => {
             return (

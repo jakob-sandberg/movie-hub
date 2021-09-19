@@ -18,7 +18,7 @@ const Pagination = ({ page, setPage, isPreviousData, total }) => {
             setPage((currentPage) => currentPage + 1);
           }
         }}
-        //make nextbutton unavailable until we new data or reached the last page.
+        //disabel if theres no more pages
         disabled={isPreviousData || page === total}
       >
         Next Page

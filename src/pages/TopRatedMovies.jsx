@@ -18,6 +18,7 @@ const TopRatedMovies = () => {
       {isLoading && <Spinner />}
 
       <Row className="justify-content-center">
+        <h1>TOP RANKED MOVIES BY ALL TIME</h1>
         {data &&
           data.results.map((movie, i) => {
             return (

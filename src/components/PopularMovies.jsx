@@ -17,7 +17,7 @@ const PopularMovies = () => {
         {data &&
           data.results.slice(0, 4).map((movie, i) => {
             return (
-              <Col key={i} sm={12} md={3}>
+              <Col key={i} sm={12} md={6} lg={3}>
                 <MovieCard movie={movie} />{" "}
               </Col>
             );

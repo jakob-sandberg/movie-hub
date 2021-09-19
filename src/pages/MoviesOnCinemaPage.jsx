@@ -17,7 +17,8 @@ const MoviesOnCinemaPage = () => {
 
       {isLoading && <Spinner />}
 
-      <Row className="justify-content-center">
+      <Row>
+        <h1>MOVIES ON CINEMA RIGHT NOW</h1>
         {data &&
           data.results.map((movie, i) => {
             return (
