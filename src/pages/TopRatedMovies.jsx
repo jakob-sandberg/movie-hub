@@ -21,14 +21,7 @@ const TopRatedMovies = () => {
         {data &&
           data.results.map((movie, i) => {
             return (
-              <Col
-                className="m-2"
-                style={{ maxHeight: "500px" }}
-                key={i}
-                sm={12}
-                md={4}
-                lg={3}
-              >
+              <Col className="m-2" key={i} sm="12" md={{ size: 6, offset: 3 }}>
                 <MovieCard movie={movie} />
               </Col>
             );

@@ -23,27 +23,28 @@ const ActorPage = () => {
       {data && (
         <div className={styles.moviePageContainer}>
           {data && (
-            <div className={styles.movieinfocontainer}>
-              <strong className={styles.title}>{data.actor.name}</strong>
-              <div className={styles.miniwrapper}>
-                <div className={styles.posterContainer}>
-                  <img
-                    className={styles.poster}
-                    src={`${prefix}${data.actor["profile_path"]}`}
-                    alt="movie poster"
-                  />
-                </div>
+            <>
+              <div className={styles.movieinfocontainer}>
+                <strong className={styles.title}>{data.actor.name}</strong>
+                <div className={styles.miniwrapper}>
+                  <div className={styles.posterContainer}>
+                    <img
+                      className={styles.poster}
+                      src={`${prefix}${data.actor["profile_path"]}`}
+                      alt="movie poster"
+                    />
+                  </div>
 
-                <div className={styles.descContainer}>
-                  <p className={styles.bioText}>{data.actor.biography}</p>
+                  <div className={styles.descContainer}>
+                    <p className={styles.bioText}>{data.actor.biography}</p>
+                  </div>
                 </div>
               </div>
-
               <div className={styles.actorsMovie}>
                 <h2>Other movies where you can see {data.actor.name}</h2>
                 <MovieList movies={data.movies} />
               </div>
-            </div>
+            </>
           )}
         </div>
       )}

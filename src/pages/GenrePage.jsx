@@ -2,10 +2,14 @@ import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { useParams } from "react-router";
 import { useQuery } from "react-query";
+
 import { getMoviesInGenre } from "../services/API";
+
 import MovieCard from "../components/MovieCard";
 import Pagination from "../components/Pagination";
 import Spinner from "../components/Spinner";
+
+import styles from "../css/MoviePage.module.css";
 
 import { useUrlSearchParams } from "use-url-search-params";
 
@@ -32,9 +36,6 @@ const GenrePage = () => {
   );
 
   if (isError) return <div>{error}</div>;
-
-  console.log("GenrePage:", data);
-
   return (
     <Container>
       {isLoading && <Spinner />}
@@ -50,8 +51,10 @@ const GenrePage = () => {
         {data &&
           data.results.map((movie, i) => {
             return (
-              <Col className="p-4" key={i} sm={12} md={3} lg={3}>
-                <MovieCard movie={movie} />{" "}
+              <Col className="p-2" key={i} sm={12} md={3}>
+                <div className={styles.genreContainer}>
+                  <MovieCard movie={movie} />
+                </div>
               </Col>
             );
           })}

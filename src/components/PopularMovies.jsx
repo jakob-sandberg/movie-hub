@@ -15,7 +15,7 @@ const PopularMovies = () => {
       {isLoading && <Spinner />}
       <Row>
         {data &&
-          data.results.map((movie, i) => {
+          data.results.slice(0, 4).map((movie, i) => {
             return (
               <Col key={i} sm={12} md={3}>
                 <MovieCard movie={movie} />{" "}

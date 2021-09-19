@@ -16,13 +16,14 @@ const TopRankedMovies = () => {
 
   return (
     <Container>
+      {isError && <h1>{error}</h1>}
       {isLoading && <Spinner />}
       <Row>
         {data &&
           data.results.slice(0, 4).map((movie, i) => {
             return (
               <Col key={i} sm={12} md={3}>
-                <MovieCard movie={movie} />
+                <MovieCard movie={movie} />{" "}
               </Col>
             );
           })}

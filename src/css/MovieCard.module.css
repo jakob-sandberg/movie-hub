@@ -60,3 +60,7 @@
 .hoverZoomShow:hover span.second {
   display: block;
 }
+
+.movieCardContainer {
+  margin: 50px;
+}

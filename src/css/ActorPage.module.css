@@ -3,9 +3,7 @@
 }
 .movieinfocontainer {
   margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
 }
 
 .title {
@@ -17,7 +15,7 @@
 
 .miniwrapper {
   width: 100%;
-  display: flex;
+  display: grid;
   justify-content: center;
 }
 
@@ -32,9 +30,10 @@
 }
 
 .descContainer {
-  width: 50%;
+  width: 90%;
   height: 100px;
-  word-wrap: break-word;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .bioText {
@@ -46,10 +45,7 @@
 }
 
 .actorsMovie {
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
+  margin-top: 300px;
 }
 
 h2 {
@@ -75,6 +71,13 @@ h2 {
 
   .descContainer {
     padding-left: 30px;
+  }
+
+  .miniwrapper {
+    display: flex;
+  }
+  .actorsMovie {
+    margin-top: 20px;
   }
 }
 

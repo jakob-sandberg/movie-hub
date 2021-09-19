@@ -10,7 +10,7 @@ const MovieList = ({ movies }) => {
       <Row md={4}>
         {movies.results.map((movie, i) => {
           return (
-            <Col xs={6} md={6} lg={2} key={i} className="my-2">
+            <Col xs={6} md={3} lg={2} key={i} className="my-2">
               <Link
                 to={`/movie/${movie.id}`}
                 style={{ textDecoration: "none", color: "white" }}
