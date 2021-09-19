@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import MovieCard from "../components/MovieCard";
 import { Container, Col, Row } from "react-bootstrap";
 import { useQuery } from "react-query";

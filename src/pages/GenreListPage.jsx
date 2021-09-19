@@ -6,7 +6,7 @@ import { getGenres } from "../services/API";
 import styles from "../css/ActorsList.module.css";
 
 const GenreListPage = () => {
-  const { data, isError, isLoading, error } = useQuery("genres", getGenres);
+  const { data, isError, error } = useQuery("genres", getGenres);
 
   if (isError) return <div className="text-center py-5">{error}</div>;
 

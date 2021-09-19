@@ -4,13 +4,12 @@ import { Container } from "react-bootstrap";
 import { useQuery } from "react-query";
 import { getNowPlaying } from "../services/API";
 
-import Spinner from "../components/Spinner";
+import Spinner from "./Spinner";
 import MovieCard from "./MovieCard";
 
 import { Row, Col } from "react-bootstrap";
 
-const CinemaMovies = () => {
-  // fetch movies that is currently playing on cinema in sweden
+const MoviesOnCinema = () => {
   const { data, isLoading, isError, error } = useQuery(
     "now-playing",
     getNowPlaying
@@ -35,4 +34,4 @@ const CinemaMovies = () => {
   );
 };
 
-export default CinemaMovies;
+export default MoviesOnCinema;

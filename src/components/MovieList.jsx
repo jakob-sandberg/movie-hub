@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col, ListGroup, Image, ListGroupItem } from "react-bootstrap";
+import { Row, Col, ListGroup, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import styles from "../css/ActorsList.module.css";
 

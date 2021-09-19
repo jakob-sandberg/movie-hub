@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Container, Card } from "react-bootstrap";
+import React from "react";
+import { Container } from "react-bootstrap";
 import { getActorById } from "../services/API";
 import { useQuery } from "react-query";
 import { useParams } from "react-router";
