@@ -21,7 +21,7 @@ const GenrePage = () => {
 
   useEffect(() => {
     setSearchParams({ ...searchParams, page });
-  }, [page]);
+  }, [page, searchParams, setSearchParams]);
 
   const { data, isError, isLoading, error, isPreviousData } = useQuery(
     ["genre", id, searchParams.page],
